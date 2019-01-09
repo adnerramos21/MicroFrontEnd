@@ -1,0 +1,60 @@
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="side" [opened]="isOpened" class="sidebar-section">
+
+    <div class="sidebar-panel">
+      <mat-toolbar color="primary">
+        <div class="company-title full-width center-align">
+          <div>Notka</div>
+        </div>
+      </mat-toolbar>
+
+      <perfect-scrollbar>
+        <div class="sidebar-content scrollable-content">
+
+          <div class="side-user-info center-align">
+            <div>
+              <img class="img-circle" src="assets/img/user.png" alt="Jane Doe">
+            </div>
+            <span class="username color-white">Jane Doe</span>
+          </div>
+
+          <div class="side-menu">
+            <mat-nav-list menuToggleDirective class="navigation">
+              <mat-list-item menuToggleLink *ngFor="let menuitem of menuItems" class="color-white">
+                <a menuToggle mat-ripple [routerLink]="['/', menuitem.state]"
+                  routerLinkActive="active-link" *ngIf="menuitem.type === 'link'">
+                  <mat-icon>{{ menuitem.icon }}</mat-icon>
+                  <span>{{ menuitem.name }}</span>
+                </a>
+                <a menuToggle mat-ripple href="javascript:;" *ngIf="menuitem.type === 'sub'">
+                  <mat-icon>{{ menuitem.icon }}</mat-icon>
+                  <span>{{ menuitem.name }}</span>
+                  <mat-icon class="menu-caret">chevron_right</mat-icon>
+                </a>
+              </mat-list-item>
+            </mat-nav-list>
+          </div>
+
+        </div>
+      </perfect-scrollbar>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <mat-toolbar>
+      <div fxLayout="row">
+        <div>
+          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+        </div>
+        <div>
+          Home
+        </div>
+      </div>
+    </mat-toolbar>
+
+    <div>
+      Content
+    </div>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>
