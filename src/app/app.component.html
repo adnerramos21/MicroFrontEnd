@@ -2,9 +2,11 @@
   <mat-sidenav #sidenav mode="side" [opened]="isOpened" class="sidebar-section">
 
     <div class="sidebar-panel">
-      <mat-toolbar color="primary">
+      <mat-toolbar color="primary" class="mat-elevation-z1">
         <div class="company-title full-width center-align">
-          <div>Notka</div>
+          <div class="relative-position">
+            <img src="assets/img/logo-name.png" alt="Notka">
+          </div>
         </div>
       </mat-toolbar>
 
@@ -21,33 +23,69 @@
           <div class="side-menu">
             <mat-nav-list menuToggleDirective class="navigation">
               <mat-list-item menuToggleLink *ngFor="let menuitem of menuItems" class="color-white">
-                <a menuToggle mat-ripple [routerLink]="['/', menuitem.state]"
-                  routerLinkActive="active-link" *ngIf="menuitem.type === 'link'">
-                  <mat-icon>{{ menuitem.icon }}</mat-icon>
-                  <span>{{ menuitem.name }}</span>
-                </a>
-                <a menuToggle mat-ripple href="javascript:;" *ngIf="menuitem.type === 'sub'">
-                  <mat-icon>{{ menuitem.icon }}</mat-icon>
-                  <span>{{ menuitem.name }}</span>
-                  <mat-icon class="menu-caret">chevron_right</mat-icon>
-                </a>
+
+                <div class="list-item-wrapper">
+                  <div>
+                    <a mat-ripple [routerLink]="['/', menuitem.state]" routerLinkActive="active-link" *ngIf="menuitem.type === 'link'">
+                      <mat-icon>{{ menuitem.icon }}</mat-icon>
+                      <span>{{ menuitem.name }}</span>
+                    </a>
+                    <a mat-ripple *ngIf="menuitem.type === 'sub'" (click)="toggleExpand()">
+                      <mat-icon>{{ menuitem.icon }}</mat-icon>
+                      <span>{{ menuitem.name }}</span>
+                      <mat-icon class="menu-caret">chevron_right</mat-icon>
+                    </a>
+                  </div>
+
+
+
+                  <!-- <div>
+                    <ul class="sub-menu" *ngIf="menuitem.type === 'sub'">
+                      <li *ngFor="let childitem of menuitem.children" class="color-white">
+                        <a href="javascript:;">{{ childitem.name }}</a>
+                      </li>
+                    </ul>
+                  </div> -->
+                </div>
+
               </mat-list-item>
             </mat-nav-list>
           </div>
 
         </div>
       </perfect-scrollbar>
+
     </div>
+
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar>
-      <div fxLayout="row">
-        <div>
-          <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+    <mat-toolbar class="mat-elevation-z1">
+      <div fxLayout="row" class="header-wrapper">
+        <div fxFlex="50" fxLayout="row" fxLayoutAlign="start center" class="left-header-side">
+          <button mat-icon-button (click)="sidenav.toggle()">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <div>
+            Home
+          </div>
+
         </div>
-        <div>
-          Home
+        <div fxFlex="50" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="16px" class="right-header-side">
+          <div class="search-box">
+            <mat-icon class="search-icon">search</mat-icon>
+            <input type="text" placeholder="Search..." autofocus="true">
+          </div>
+          <div class="messages-notifications">
+            <button mat-icon-button>
+              <mat-icon>notifications</mat-icon>
+            </button>
+          </div>
+          <div class="logged-user show-pointer">
+            <div>
+              <img class="img-circle small-avatar" src="assets/img/user.png" alt="Jane Doe">
+            </div>
+          </div>
         </div>
       </div>
     </mat-toolbar>

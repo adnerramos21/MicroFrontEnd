@@ -1,7 +1,17 @@
 // Utility classes
+$primary-color: rgba(103, 58, 183, 1);
+$complementary-color1: rgba(221, 34, 221, 1);
 
 .img-circle {
 	border-radius: 50%;
+}
+
+.small-avatar {
+    width: 36px;
+}
+
+.show-pointer {
+    cursor: pointer;
 }
 
 .left-align {
