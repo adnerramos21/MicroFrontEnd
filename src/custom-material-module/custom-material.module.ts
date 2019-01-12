@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import {
-  MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatButtonModule
+  MatToolbarModule, MatSidenavModule, MatIconModule, MatListModule, MatButtonModule,
+  MatMenuModule
 } from '@angular/material';
 
 @NgModule({
@@ -11,6 +12,7 @@ import {
     MatIconModule,
     MatListModule,
     MatButtonModule,
+    MatMenuModule,
   ],
   imports: [
     MatToolbarModule,
@@ -18,6 +20,7 @@ import {
     MatIconModule,
     MatListModule,
     MatButtonModule,
+    MatMenuModule,
   ]
 })
 export class CustomMaterialModule { }
