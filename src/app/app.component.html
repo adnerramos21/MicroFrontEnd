@@ -59,9 +59,28 @@
 
   </mat-sidenav>
 
+  <mat-sidenav #notificationSideNav mode="over" [opened]="isNotificationPanelOpened" position="end">
+    <div class="notification-panel">
+      <mat-toolbar color="primary">Notification Panel</mat-toolbar>
+      <div class="notification-list">
+
+        <mat-list role="list">
+          <mat-list-item role="listitem" *ngFor="let notification of notifications">
+            <mat-icon mat-list-icon color="primary">mail_outline</mat-icon>
+            <h4 mat-line class="title">{{notification.title}}</h4>
+            <p mat-line class="message">{{notification.body.message}}</p>
+            <div mat-line class="timeAgo">{{notification.body.timeAgo}}</div>
+          </mat-list-item>
+        </mat-list>
+
+      </div>
+    </div>
+  </mat-sidenav>
+
   <mat-sidenav-content>
     <mat-toolbar class="mat-elevation-z1">
       <div fxLayout="row" class="header-wrapper">
+
         <div fxFlex="50" fxLayout="row" fxLayoutAlign="start center" class="left-header-side">
           <button mat-icon-button (click)="sidenav.toggle()">
             <mat-icon>menu</mat-icon>
@@ -69,34 +88,17 @@
           <div>
             Home
           </div>
-
         </div>
+
         <div fxFlex="50" fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="16px" class="right-header-side">
           <div class="search-box">
             <mat-icon class="search-icon">search</mat-icon>
             <input type="text" placeholder="Search..." autofocus="true">
           </div>
           <div class="notification-panel">
-            <button mat-icon-button color="primary">
+            <button mat-icon-button color="primary" (click)="notificationSideNav.toggle()">
               <mat-icon>notifications</mat-icon>
             </button>
-
-            <div class="notification-dropdown">
-              <ul>
-                <li>
-                  <span>New applicant has uploaded his resume</span>
-                </li>
-                <li>
-                  <span>James Franco completed the application process</span>
-                </li>
-                <li>
-                  <span> Seth Rogen added a new skill to his resume </span>
-                </li>
-                <li>
-                  <span>A new position has been opened in the Development Department</span>
-                </li>
-              </ul>
-            </div>
           </div>
           <div class="logged-user show-pointer">
             <div>
@@ -104,6 +106,7 @@
             </div>
           </div>
         </div>
+
       </div>
     </mat-toolbar>
 
