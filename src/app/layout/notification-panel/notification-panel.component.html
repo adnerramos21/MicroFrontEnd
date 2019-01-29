@@ -1,0 +1,15 @@
+<div class="notification-panel">
+  <mat-toolbar color="primary">Notification Panel</mat-toolbar>
+  <div class="notification-list">
+
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let notification of notifications">
+        <mat-icon mat-list-icon color="primary">mail_outline</mat-icon>
+        <h4 mat-line class="title">{{notification.title}}</h4>
+        <p mat-line class="message">{{notification.body.message}}</p>
+        <div mat-line class="timeAgo">{{notification.body.timeAgo}}</div>
+      </mat-list-item>
+    </mat-list>
+
+  </div>
+</div>

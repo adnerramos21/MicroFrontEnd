@@ -1,0 +1,46 @@
+.notification-panel {
+  .notification-list {
+    width: 300px;
+
+    .mat-list {
+      padding: 0;
+
+      .mat-list-item {
+        border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        padding: 7px 0px;
+        cursor: pointer;
+        height: auto;
+
+        h4.title {
+          text-transform: uppercase;
+          color: rgba(166, 166, 166, 1);
+          font-size: 12px;
+          font-weight: 500;
+          margin-bottom: 10px;
+        }
+
+        p.message {
+          display: block;
+          font-weight: 500;
+          margin-bottom: 7px;
+          text-overflow: initial;
+          white-space: normal;
+        }
+
+        div.timeAgo {
+          display: block;
+          color: #a7a6a6;
+          text-rendering: optimizeLegibility;
+        }
+      }
+
+      .mat-list-item:last-child {
+        border-bottom: none;
+      }
+
+      .mat-list-item:hover {
+        background-color: #edebeb;
+      }
+    }
+  }
+}

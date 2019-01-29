@@ -1,0 +1,55 @@
+<div class="sidebar-panel">
+  <mat-toolbar color="primary" class="mat-elevation-z1">
+    <div class="company-title full-width center-align">
+      <div class="relative-position">
+        <img src="assets/img/logo-name.png" alt="Notka">
+      </div>
+    </div>
+  </mat-toolbar>
+
+  <perfect-scrollbar>
+    <div class="sidebar-content scrollable-content">
+
+      <div class="side-user-info center-align">
+        <div>
+          <img class="img-circle" src="assets/img/user.png" alt="Jane Doe">
+        </div>
+        <span class="username color-white">Jane Doe</span>
+      </div>
+
+      <div class="side-menu">
+        <mat-nav-list menuToggleDirective class="navigation">
+          <mat-list-item menuToggleLink *ngFor="let menuitem of menuItems" class="color-white">
+
+            <div class="list-item-wrapper">
+              <div>
+                <a mat-ripple [routerLink]="['/', menuitem.state]" routerLinkActive="active-link" *ngIf="menuitem.type === 'link'">
+                  <mat-icon>{{ menuitem.icon }}</mat-icon>
+                  <span>{{ menuitem.name }}</span>
+                </a>
+
+                <a mat-ripple *ngIf="menuitem.type === 'submenu'" (click)="toggleExpand()">
+                  <mat-icon>{{ menuitem.icon }}</mat-icon>
+                  <span>{{ menuitem.name }}</span>
+                  <mat-icon class="menu-caret">chevron_right</mat-icon>
+                </a>
+              </div>
+
+              <!-- <div>
+                    <ul class="sub-menu" *ngIf="menuitem.type === 'submenu'">
+                      <li *ngFor="let childitem of menuitem.children" class="color-white">
+                        <a href="javascript:;">{{ childitem.name }}</a>
+                      </li>
+                    </ul>
+                  </div> -->
+
+            </div>
+
+          </mat-list-item>
+        </mat-nav-list>
+      </div>
+
+    </div>
+  </perfect-scrollbar>
+
+</div>

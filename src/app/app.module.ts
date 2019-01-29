@@ -9,6 +9,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
+import { ContentComponent } from './layout/content/content.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { NotificationPanelComponent } from './layout/notification-panel/notification-panel.component';
+import { SidebarPanelComponent } from './layout/sidebar-panel/sidebar-panel.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -16,7 +20,11 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ContentComponent,
+    HeaderComponent,
+    NotificationPanelComponent,
+    SidebarPanelComponent
   ],
   imports: [
     BrowserModule,
