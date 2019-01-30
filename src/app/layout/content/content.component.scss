@@ -1,0 +1,13 @@
+@import "~src/assets/scss/variables";
+@import "~src/assets/scss/base";
+
+
+.content-wrapper {
+    margin: 10px auto 0;
+
+    .info-box {
+        .left-side, .right-side {
+            display: inline-block;
+        }
+    }
+}

@@ -1,9 +1,16 @@
+@import "~src/assets/scss/variables";
+@import "~src/assets/scss/base";
+
 .mat-toolbar {
     position: relative;
   
     .header-wrapper {
       max-width: 100%;
       width: 100%;
+
+      .title {
+        text-transform: capitalize;
+      }
   
       .right-header-side {
         .search-box {
