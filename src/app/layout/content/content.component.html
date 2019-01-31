@@ -3,21 +3,21 @@
   <div fxLayout="row" fxLayoutGap="10px" class="info-box space-margin-20">
     <div *ngFor="let infoBox of infoBoxes" fxFlex="25">
       <mat-card>
-        <div>
-          <div class="icon left-side">
+        <div class="card-wrapper" fxLayout="row">
+          <div class="icon left-side" fxFlex="20">
             <span>
               <mat-icon>
                 {{infoBox.icon}}
               </mat-icon>
             </span>
           </div>
-          <div class="right-side">
+          <div class="right-side" fxFlex="80">
             <div class="title">
               {{infoBox.title}}
             </div>
             <div class="text">
-              <span>{{infoBox.amount}}</span>
-              <span>{{infoBox.when}}</span>
+              <span class="amount">{{infoBox.amount}}</span>
+              <span class="when">{{infoBox.when}}</span>
             </div>
           </div>
         </div>

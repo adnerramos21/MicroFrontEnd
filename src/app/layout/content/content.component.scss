@@ -1,13 +1,36 @@
 @import "~src/assets/scss/variables";
 @import "~src/assets/scss/base";
 
-
 .content-wrapper {
-    margin: 10px auto 0;
+  margin: 10px auto 0;
 
-    .info-box {
-        .left-side, .right-side {
-            display: inline-block;
-        }
+  .info-box {
+    .card-wrapper {
+      display: flex;
+
+      .left-side {
+				mat-icon {
+					font-size: 46px;
+				}
+      }
+
+      .right-side {
+        .title {
+          font-size: .91rem;
+          text-transform: uppercase;
+				}
+
+				.amount {
+					font-size: 1.3rem;
+					font-weight: 500;
+				}
+
+				.when {
+					padding-left: 10px;
+					font-size: .88rem;
+					text-transform: capitalize;
+				}
+      }
     }
+  }
 }
