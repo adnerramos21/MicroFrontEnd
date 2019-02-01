@@ -25,4 +25,102 @@
     </div>
   </div>
 
+  <div class="top-applicants space-margin-20">
+    <mat-card>
+      <div fxLayout="row" fxLayoutGap="15px">
+
+        <div fxFlex="75" class="full-width">
+          <div class="notka-card-title">
+            <div class="card-inner-title">
+              <div class="left-side left-align">
+                <h4>Top Applicants</h4>
+              </div>
+              <div class="right-side right-align"></div>
+            </div>
+          </div>
+
+          <div class="notka-card-content">
+            <table mat-table [dataSource]="dataSource">
+
+              <ng-container matColumnDef="picture">
+                <th mat-header-cell *matHeaderCellDef> Picture </th>
+                <td mat-cell *matCellDef="let element">
+                  <img class="img-circle small-avatar" src="assets/img/applicants/user-{{element.picture}}.jpg" alt="user-1">
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef> Name </th>
+                <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="title">
+                <th mat-header-cell *matHeaderCellDef> Title </th>
+                <td mat-cell *matCellDef="let element"> {{element.title}} </td>
+              </ng-container>
+
+              <ng-container matColumnDef="skills">
+                <th mat-header-cell *matHeaderCellDef> Skills </th>
+                <td mat-cell *matCellDef="let element"> {{element.skills}} </td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+          </div>
+        </div>
+
+        <div fxFlex="25" class="full-width">
+          <div class="notka-card-title">
+            <div class="card-inner-title">
+              <div class="left-side left-align">
+                <h4>Position</h4>
+                <div class="position-name">Senior Front End Software Engineering</div>
+                <div class="company-name space-top-margin-10">Company: ABC News</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="notka-card-content space-top-margin-20">
+            <div>Skills needed:</div>
+            <mat-list role="list">
+              <mat-list-item role="listitem">
+                <div fxLayout="row" class="full-width">
+                  <div fxFlex="50">
+                    Angular 2+
+                  </div>
+                  <div fxFlex="50" class="right-align">
+                    React
+                  </div>
+                </div>
+              </mat-list-item>
+              <mat-list-item role="listitem">
+                <div fxLayout="row" class="full-width">
+                  <div fxFlex="50">
+                    HTML 5
+                  </div>
+                  <div fxFlex="50" class="right-align">
+                    CSS 3
+                  </div>
+                </div>
+              </mat-list-item>
+              <mat-list-item role="listitem">
+                <div fxLayout="row" class="full-width">
+                  <div fxFlex="50">
+                    ES6
+                  </div>
+                  <div fxFlex="50" class="right-align">
+                    NodeJS
+                  </div>
+                </div>
+              </mat-list-item>
+            </mat-list>
+          </div>
+
+        </div>
+      </div>
+
+    </mat-card>
+  </div>
+
 </div>

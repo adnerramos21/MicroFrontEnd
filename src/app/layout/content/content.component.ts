@@ -1,5 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 
+export interface PeriodicElement {
+  picture: string;
+  name: string;
+  title: string;
+  skills: string;
+}
+
+
+const ELEMENT_DATA: PeriodicElement[] = [
+  { picture: '1', name: 'Lena Heady', title: 'Senior Front End Developer' , skills: 'HTML 5, CSS 3, ES6+, Gulp.JS, NodeJS' },
+  { picture: '2', name: 'Amy Adams', title: 'Front End Developer' , skills: 'HTML 5, CSS 3, ES6+' },
+  { picture: '3', name: 'Mark Wahlberg', title: 'Full Stack Developer' , skills: 'HTML 5, CSS 3, ES6+, .Net, NodeJS' },
+  { picture: '4', name: 'Rachel McAdams', title: 'Full Stack Developer' , skills: 'HTML 5, CSS 3, ES6+, PHP, .Net, NodeJS' },
+  { picture: '5', name: 'Emma Stone', title: 'Front End Developer' , skills: 'HTML 5, CSS 3, ES6+' },
+];
+
 @Component({
   selector: 'app-content',
   templateUrl: './content.component.html',
@@ -33,6 +49,9 @@ export class ContentComponent implements OnInit {
       when: 'This month'
     },
   ];
+
+  displayedColumns: string[] = ['picture', 'name', 'title', 'skills'];
+  dataSource = ELEMENT_DATA;
 
   constructor() { }
 
