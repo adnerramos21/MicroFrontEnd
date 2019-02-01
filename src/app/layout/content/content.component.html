@@ -61,7 +61,16 @@
 
               <ng-container matColumnDef="skills">
                 <th mat-header-cell *matHeaderCellDef> Skills </th>
-                <td mat-cell *matCellDef="let element"> {{element.skills}} </td>
+                <td mat-cell *matCellDef="let element">
+                  <ng-template *ngIf="userHasThisSkill(element.name, element.skills)">
+
+                  </ng-template>
+                  <span *ngFor="let skill of element.skills.split(',')" 
+                  class="pill space-right-margin-10"
+                  [ngClass]="{ 'pill-primary': false}">
+                    {{skill}}
+                  </span>
+                </td>
               </ng-container>
 
               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -87,30 +96,42 @@
               <mat-list-item role="listitem">
                 <div fxLayout="row" class="full-width">
                   <div fxFlex="50">
-                    Angular 2+
+                    <span class="pill">
+                      Angular 2+
+                    </span>
                   </div>
                   <div fxFlex="50" class="right-align">
-                    React
+                    <span class="pill">
+                      React
+                    </span>
                   </div>
                 </div>
               </mat-list-item>
               <mat-list-item role="listitem">
                 <div fxLayout="row" class="full-width">
                   <div fxFlex="50">
-                    HTML 5
+                    <span class="pill">
+                      HTML 5
+                    </span>
                   </div>
                   <div fxFlex="50" class="right-align">
-                    CSS 3
+                    <span class="pill">
+                      CSS 3
+                    </span>
                   </div>
                 </div>
               </mat-list-item>
               <mat-list-item role="listitem">
                 <div fxLayout="row" class="full-width">
                   <div fxFlex="50">
-                    ES6
+                    <span class="pill">
+                      ES6
+                    </span>
                   </div>
                   <div fxFlex="50" class="right-align">
-                    NodeJS
+                    <span class="pill">
+                      NodeJS
+                    </span>
                   </div>
                 </div>
               </mat-list-item>

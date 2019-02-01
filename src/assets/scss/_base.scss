@@ -1,57 +1,68 @@
-// Utility classes
-$primary-color: rgba(103, 58, 183, 1);
-$complementary-color1: rgba(221, 34, 221, 1);
+@import "variables";
 
 .img-circle {
-	border-radius: 50%;
+  border-radius: 50%;
 }
 
 .small-avatar {
-    width: 36px;
+  width: 36px;
 }
 
 .show-pointer {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .left-align {
-    text-align: left !important;
+  text-align: left !important;
 }
 
 .right-align {
-    text-align: right !important;
+  text-align: right !important;
 }
 
 .center-align {
-    text-align: center !important;
+  text-align: center !important;
 }
 
 .relative-position {
-    position: relative;
+  position: relative;
 }
 
 .color-white {
-    color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 .full-width {
-    width: 100%;
+  width: 100%;
+}
+
+.pill {
+  padding: 5px 12px;
+  border: 1px solid $light-grey-color;
+	border-radius: 15px;
+	text-align: center;
+	white-space: nowrap;
 }
 
 
 .space-margin-10 {
-    margin: 10px;
+  margin: 10px;
 }
 
 .space-margin-20 {
-    margin: 20px;
+  margin: 20px;
 }
 
 
 .space-top-margin-10 {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .space-top-margin-20 {
-    margin-top: 20px;
+  margin-top: 20px;
+}
+
+
+.space-right-margin-10 {
+  margin-right: 10px;
 }

@@ -9,11 +9,11 @@ export interface PeriodicElement {
 
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  { picture: '1', name: 'Lena Heady', title: 'Senior Front End Developer' , skills: 'HTML 5, CSS 3, ES6+, Gulp.JS, NodeJS' },
-  { picture: '2', name: 'Amy Adams', title: 'Front End Developer' , skills: 'HTML 5, CSS 3, ES6+' },
-  { picture: '3', name: 'Mark Wahlberg', title: 'Full Stack Developer' , skills: 'HTML 5, CSS 3, ES6+, .Net, NodeJS' },
-  { picture: '4', name: 'Rachel McAdams', title: 'Full Stack Developer' , skills: 'HTML 5, CSS 3, ES6+, PHP, .Net, NodeJS' },
-  { picture: '5', name: 'Emma Stone', title: 'Front End Developer' , skills: 'HTML 5, CSS 3, ES6+' },
+  { picture: '1', name: 'Lena Heady', title: 'Senior Front End Developer', skills: 'Angular, HTML 5, CSS 3, ES6+, Gulp.JS, NodeJS' },
+  { picture: '2', name: 'Amy Adams', title: 'Front End Developer', skills: 'AngularJS, HTML 5, CSS 3, ES6+' },
+  { picture: '3', name: 'Mark Wahlberg', title: 'Full Stack Developer', skills: 'Angular, HTML 5, CSS 3, ES6+, .NET, NodeJS' },
+  { picture: '4', name: 'Rachel McAdams', title: 'Full Stack Developer', skills: 'React, HTML 5, CSS 3, ES6+, PHP, .NET, NodeJS' },
+  { picture: '5', name: 'Emma Stone', title: 'Front End Developer', skills: 'Vue JS, HTML 5, CSS 3, ES6+' },
 ];
 
 @Component({
@@ -52,10 +52,31 @@ export class ContentComponent implements OnInit {
 
   displayedColumns: string[] = ['picture', 'name', 'title', 'skills'];
   dataSource = ELEMENT_DATA;
+  positionSkills = ['Angular 2+', 'React', 'HTML 5', 'CSS 3', 'ES6', 'NodeJS'];
+  // dataSkills = ELEMENT_DATA.map(val => val.skills.split(','));
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  userHasThisSkill(applicant, skill) {
+
+    // console.log(applicant, skill);
+
+    // const tableData: PeriodicElement[] = ELEMENT_DATA;
+
+    // tableData.map(data => {
+    //   data.skills.split(',').map(val => {
+    //     // console.log(val, skill);
+    //     if (val === skill) {
+    //       return true;
+    //     }
+    //   });
+    // });
+
+    return false;
   }
 
 }
