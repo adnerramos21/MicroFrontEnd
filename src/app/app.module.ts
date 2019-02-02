@@ -13,6 +13,7 @@ import { ContentComponent } from './layout/content/content.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { NotificationPanelComponent } from './layout/notification-panel/notification-panel.component';
 import { SidebarPanelComponent } from './layout/sidebar-panel/sidebar-panel.component';
+import { SkillCheckerComponent } from './utilities/skill-checker/skill-checker.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -24,7 +25,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     ContentComponent,
     HeaderComponent,
     NotificationPanelComponent,
-    SidebarPanelComponent
+    SidebarPanelComponent,
+    SkillCheckerComponent
   ],
   imports: [
     BrowserModule,

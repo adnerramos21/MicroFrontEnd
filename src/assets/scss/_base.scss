@@ -44,6 +44,13 @@
 	white-space: nowrap;
 }
 
+.pill-primary {
+	// background-color: adjust-hue($complementary-color1, 95%);
+	background-color: darken($complementary-color1, 15%);
+	border-color: darken($complementary-color1, 18%);
+	color: #fff;
+}
+
 
 .space-margin-10 {
   margin: 10px;

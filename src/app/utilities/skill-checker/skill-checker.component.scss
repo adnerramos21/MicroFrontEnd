@@ -1,0 +1,8 @@
+@import "~src/assets/scss/variables";
+@import "~src/assets/scss/base";
+
+.skill-wrapper {
+    width: 400px;
+    display: flex;
+    flex-flow: row wrap;
+}

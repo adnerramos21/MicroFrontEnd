@@ -43,9 +43,9 @@
             <table mat-table [dataSource]="dataSource">
 
               <ng-container matColumnDef="picture">
-                <th mat-header-cell *matHeaderCellDef> Picture </th>
+                <th mat-header-cell *matHeaderCellDef> Pict </th>
                 <td mat-cell *matCellDef="let element">
-                  <img class="img-circle small-avatar" src="assets/img/applicants/user-{{element.picture}}.jpg" alt="user-1">
+                  <img class="img-circle small-avatar" src="assets/img/applicants/user-{{element.picture}}.jpg" alt="{{element.picture}}">
                 </td>
               </ng-container>
 
@@ -62,14 +62,7 @@
               <ng-container matColumnDef="skills">
                 <th mat-header-cell *matHeaderCellDef> Skills </th>
                 <td mat-cell *matCellDef="let element">
-                  <ng-template *ngIf="userHasThisSkill(element.name, element.skills)">
-
-                  </ng-template>
-                  <span *ngFor="let skill of element.skills.split(',')" 
-                  class="pill space-right-margin-10"
-                  [ngClass]="{ 'pill-primary': false}">
-                    {{skill}}
-                  </span>
+                  <app-skill-checker [positionSkills]="positionSkills" [skills]="element.skills" [candidateName]="element.name"></app-skill-checker>
                 </td>
               </ng-container>
 
