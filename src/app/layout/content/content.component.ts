@@ -53,30 +53,10 @@ export class ContentComponent implements OnInit {
   displayedColumns: string[] = ['picture', 'name', 'title', 'skills'];
   dataSource = ELEMENT_DATA;
   positionSkills = ['Angular 2+', 'React', 'HTML 5', 'CSS 3', 'ES6', 'NodeJS'];
-  // dataSkills = ELEMENT_DATA.map(val => val.skills.split(','));
 
   constructor() { }
 
   ngOnInit() {
-  }
-
-
-  userHasThisSkill(applicant, skill) {
-
-    // console.log(applicant, skill);
-
-    // const tableData: PeriodicElement[] = ELEMENT_DATA;
-
-    // tableData.map(data => {
-    //   data.skills.split(',').map(val => {
-    //     // console.log(val, skill);
-    //     if (val === skill) {
-    //       return true;
-    //     }
-    //   });
-    // });
-
-    return false;
   }
 
 }
