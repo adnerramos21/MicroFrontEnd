@@ -26,7 +26,7 @@ export class ContentComponent implements OnInit {
   infoBoxes = [
     {
       icon: 'supervised_user_circle',
-      title: 'Number of Applicants',
+      title: 'Applicants',
       amount: 36,
       when: 'This month'
     },

@@ -1,17 +1,18 @@
-<div class="content-wrapper">
+<div class="content-wrapper" [ngClass.md]="{'tablet-view':true}">
 
-  <div fxLayout="row" fxLayoutGap="10px" class="info-box space-margin-20">
+  <div class="info-box space-margin-20" fxLayout="row" fxLayoutGap="10px">
     <div *ngFor="let infoBox of infoBoxes" fxFlex="25">
       <mat-card>
         <div class="card-wrapper" fxLayout="row">
-          <div class="icon left-side" fxFlex="20">
+          <!-- fxHide.lt-lg="true" -->
+          <div class="icon left-side">
             <span>
               <mat-icon>
                 {{infoBox.icon}}
               </mat-icon>
             </span>
           </div>
-          <div class="right-side" fxFlex="80">
+          <div class="right-side" >
             <div class="title">
               {{infoBox.title}}
             </div>
@@ -20,6 +21,7 @@
               <span class="when">{{infoBox.when}}</span>
             </div>
           </div>
+
         </div>
       </mat-card>
     </div>
@@ -46,7 +48,7 @@
 
             <div class="notka-card-content space-top-margin-10">
               <div>
-                Skills needed: <span>{{positionSkills.join(',  ')}} </span> 
+                Skills needed: <span>{{positionSkills.join(', ')}} </span>
               </div>
             </div>
 
