@@ -1,9 +1,7 @@
 <div class="skill-wrapper">
-  <span *ngFor="let skill of skills.split(',')" 
+  <span *ngFor="let item of matchedSkills" 
   class="pill space-right-margin-10" 
-  [ngClass]="{ 'pill-primary': false }">
-    {{skill}}
+  [ngClass]="{ 'pill-primary': item.isMatch }">
+    {{item.skill}}
   </span>
 </div>
-
-<!-- space-top-margin-10 space-bottom-margin-10 -->

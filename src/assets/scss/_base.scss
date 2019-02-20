@@ -28,6 +28,10 @@
   position: relative;
 }
 
+.display-inline-block {
+  display: inline-block
+}
+
 .color-white {
   color: #ffffff !important;
 }
@@ -45,10 +49,8 @@
 }
 
 .pill-primary {
-	// background-color: adjust-hue($complementary-color1, 95%);
-	background-color: darken($complementary-color1, 15%);
-	border-color: darken($complementary-color1, 18%);
-	color: #fff;
+	border-color: darken($primary-color, 25%);
+	color: $primary-color;
 }
 
 
@@ -75,4 +77,8 @@
 
 .space-right-margin-10 {
   margin-right: 10px;
+}
+
+.space-left-margin-10 {
+  margin-left: 10px;
 }

@@ -53,6 +53,8 @@ export class ContentComponent implements OnInit {
   displayedColumns: string[] = ['picture', 'name', 'title', 'skills'];
   dataSource = ELEMENT_DATA;
   positionSkills = ['Angular 2+', 'React', 'HTML 5', 'CSS 3', 'ES6', 'NodeJS'];
+  positionName = 'Senior Front End Software Engineering';
+  companyName = 'ABC News';
 
   constructor() { }
 

@@ -1,46 +1,52 @@
 import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-skill-checker',
+  // tslint:disable-next-line:component-selector
+  selector: 'notka-skill-checker',
   templateUrl: './skill-checker.component.html',
   styleUrls: ['./skill-checker.component.scss']
 })
 export class SkillCheckerComponent implements OnInit {
 
   @Input() skills: string;
-  @Input() candidateName: any;
+  @Input() candidateName: string;
   @Input() positionSkills: any[];
+
+  matchedSkills = [];
 
   constructor() { }
 
   ngOnInit() {
-    // console.log(this.skills, this.candidateName, this.positionSkills);
-    // console.log(this.positionSkills);
+    this.matchedSkills = this.matchSkills(this.skills, this.positionSkills);
+  }
 
+  matchSkills(skills: string, positionSkills: any[]) {
+    const resultMatch = new Array();
+    let regex: RegExp,
+      isMatch = false;
 
-    const targetSkills = this.positionSkills.map(pskill => {
-      if (this.skills.search(pskill) !== -1) {
-        return pskill;
-      }
-      return null;
+    skills.split(',').map((skill: string, index: number) => {
+
+      skill = skill.trim();
+
+      resultMatch[index] = {
+        skill
+      };
+
+      positionSkills.forEach((pskill: string) => {
+        regex = new RegExp(skill.split(' ')[0], 'i');
+        isMatch = pskill.search(regex) !== -1;
+
+        if (isMatch) {
+          resultMatch[index].isMatch = isMatch;
+        }
+
+        isMatch = false;
+      });
+
     });
 
-    console.log(targetSkills);
-
-    // const candidateSkills = this.skills.split(',').map(cskills => {
-    // this.positionSkills.map(pskills => {
-
-    //   if (cskills == pskills) {
-    //     console.log(cskills);
-    //   }
-
-    // });
-
-    //   return this.positionSkills.indexOf(cskills) !== -1 ? cskills : null;
-    // });
-
-    // console.log(candidateSkills);
-
+    return resultMatch;
   }
 
 }

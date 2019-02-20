@@ -27,9 +27,38 @@
 
   <div class="top-applicants space-margin-20">
     <mat-card>
-      <div fxLayout="row" fxLayoutGap="15px">
 
-        <div fxFlex="75" class="full-width">
+      <div fxLayout="row">
+        <div fxFlex="100">
+          <div class="full-width">
+
+            <div class="notka-card-title">
+              <div class="card-inner-title">
+                <div class="left-side left-align">
+                  <h4>Position</h4>
+                  <div>
+                    <div class="position-name display-inline-block">{{positionName}} for </div>
+                    <div class="company-name display-inline-block">{{companyName}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="notka-card-content space-top-margin-10">
+              <div>
+                Skills needed: <span>{{positionSkills.join(',  ')}} </span> 
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="space-top-margin-20"></div>
+
+      <div fxLayout="row">
+
+        <div fxFlex="100" class="full-width">
           <div class="notka-card-title">
             <div class="card-inner-title">
               <div class="left-side left-align">
@@ -62,7 +91,7 @@
               <ng-container matColumnDef="skills">
                 <th mat-header-cell *matHeaderCellDef> Skills </th>
                 <td mat-cell *matCellDef="let element">
-                  <app-skill-checker [positionSkills]="positionSkills" [skills]="element.skills" [candidateName]="element.name"></app-skill-checker>
+                  <notka-skill-checker [positionSkills]="positionSkills" [skills]="element.skills" [candidateName]="element.name"></notka-skill-checker>
                 </td>
               </ng-container>
 
@@ -72,66 +101,6 @@
           </div>
         </div>
 
-        <div fxFlex="25" class="full-width">
-          <div class="notka-card-title">
-            <div class="card-inner-title">
-              <div class="left-side left-align">
-                <h4>Position</h4>
-                <div class="position-name">Senior Front End Software Engineering</div>
-                <div class="company-name space-top-margin-10">Company: ABC News</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="notka-card-content space-top-margin-20">
-            <div>Skills needed:</div>
-            <mat-list role="list">
-              <mat-list-item role="listitem">
-                <div fxLayout="row" class="full-width">
-                  <div fxFlex="50">
-                    <span>
-                      Angular 2+
-                    </span>
-                  </div>
-                  <div fxFlex="50" class="right-align">
-                    <span>
-                      React
-                    </span>
-                  </div>
-                </div>
-              </mat-list-item>
-              <mat-list-item role="listitem">
-                <div fxLayout="row" class="full-width">
-                  <div fxFlex="50">
-                    <span>
-                      HTML 5
-                    </span>
-                  </div>
-                  <div fxFlex="50" class="right-align">
-                    <span>
-                      CSS 3
-                    </span>
-                  </div>
-                </div>
-              </mat-list-item>
-              <mat-list-item role="listitem">
-                <div fxLayout="row" class="full-width">
-                  <div fxFlex="50">
-                    <span>
-                      ES6
-                    </span>
-                  </div>
-                  <div fxFlex="50" class="right-align">
-                    <span>
-                      NodeJS
-                    </span>
-                  </div>
-                </div>
-              </mat-list-item>
-            </mat-list>
-          </div>
-
-        </div>
       </div>
 
     </mat-card>
