@@ -23,7 +23,7 @@
 
             <div class="list-item-wrapper">
               <div>
-                <a mat-ripple [routerLink]="['/', menuitem.state]" routerLinkActive="active-link" *ngIf="menuitem.type === 'link'">
+                <a mat-ripple [routerLink]="[menuitem.path]" routerLinkActive="active-link" *ngIf="menuitem.type === 'link'">
                   <mat-icon>{{ menuitem.icon }}</mat-icon>
                   <span>{{ menuitem.name }}</span>
                 </a>

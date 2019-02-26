@@ -4,6 +4,14 @@ export const MENU_ITEMS = [
     name: 'DASHBOARD',
     type: 'link',
     icon: 'explore',
+    path: '',
+  },
+  {
+    state: 'applicants',
+    name: 'APPLICANTS',
+    type: 'link',
+    icon: 'supervised_user_circle',
+    path: 'applicants',
   },
   //   {
   //     state: 'applicants',
