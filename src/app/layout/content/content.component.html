@@ -1,7 +1,8 @@
-<div class="content-wrapper" [ngClass.md]="{'tablet-view':true}">
+<div class="content-wrapper" [ngClass.md]="{'tablet-view':true}" [ngClass.sm]="{'mobile-landscape-view':true}"
+  [ngClass.xs]="{'mobile-portrait-view':true}">
 
-  <div class="info-box space-margin-20" fxLayout="row" fxLayoutGap="10px">
-    <div *ngFor="let infoBox of infoBoxes" fxFlex="25">
+  <div class="info-box space-margin-20" fxLayout="row" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="10px">
+    <div *ngFor="let infoBox of infoBoxes" fxFlex="25" fxFlex.sm="100" fxFlex.xs="100">
       <mat-card>
         <div class="card-wrapper" fxLayout="row">
           <!-- fxHide.lt-lg="true" -->
@@ -12,7 +13,7 @@
               </mat-icon>
             </span>
           </div>
-          <div class="right-side" >
+          <div class="right-side">
             <div class="title">
               {{infoBox.title}}
             </div>

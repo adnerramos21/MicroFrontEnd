@@ -2,55 +2,85 @@
 @import "~src/assets/scss/base";
 
 .mat-toolbar {
-    position: relative;
-  
-    .header-wrapper {
-      max-width: 100%;
-      width: 100%;
+  position: relative;
 
-      .title {
-        text-transform: capitalize;
+  .header-wrapper {
+    max-width: 100%;
+    width: 100%;
+
+    .title {
+      text-transform: capitalize;
+    }
+
+    .right-header-side {
+      .search-box {
+        display: initial;
+        position: relative;
+        margin: 0px 1rem;
+
+        input {
+          background-color: rgba(121, 138, 185, 0.07);
+          border-radius: 30px;
+          padding: 8px 15px 8px 40px;
+          display: block;
+          width: 220px;
+          outline: none;
+          border: none;
+          box-shadow: none;
+          background: #e6e6e6;
+          font-weight: 400;
+        }
       }
-  
-      .right-header-side {
-        .search-box {
-          position: relative;
-          margin: 0px 1rem;
-  
-          input {
-            background-color: rgba(121, 138, 185, 0.07);
-            border-radius: 30px;
-            padding: 8px 15px 8px 40px;
-            display: block;
-            width: 220px;
-            outline: none;
-            border: none;
-            box-shadow: none;
-            background: #e6e6e6;
-            font-weight: 400;
-          }
-        }
-  
-        mat-icon.search-icon {
-          speak: none;
-          font-style: normal;
-          font-weight: 700;
-          font-variant: normal;
-          text-transform: none;
-          line-height: 1;
-          position: absolute;
-          left: 15px;
-          top: 60%;
-          transform: translateY(-50%);
-          font-size: 20px;
-          color: rgba(0, 0, 0, 0.5);
-        }
-  
-        .logged-user {
-          // this line will override border-radius
-          // border: 1px solid $complementary-color1;
-        }
+
+      mat-icon.search-icon {
+        speak: none;
+        font-style: normal;
+        font-weight: 700;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        position: absolute;
+        left: 15px;
+        top: 60%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      .logged-user {
+        // this line will override border-radius
+        // border: 1px solid $complementary-color1;
       }
     }
   }
-  
+}
+
+.mobile-landscape-view {
+  .info-box {
+    .card-wrapper {
+      .left-side {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.mobile-landscape-view {
+  .header-wrapper {
+    .right-header-side {
+      .search-box {
+        display: none;
+      }
+    }
+  }
+}
+
+.mobile-portrait-view {
+  .header-wrapper {
+    .right-header-side {
+      .search-box {
+        display: none;
+      }
+    }
+  }
+}
