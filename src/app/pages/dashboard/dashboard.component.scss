@@ -109,6 +109,9 @@
 // TABLET LOOK AND FEEL
 .tablet-view {
   .info-box {
+    .info-box-child:not(:last-child) {
+        margin-bottom: 10px;
+    }
     .card-wrapper {
       .left-side {
         position: absolute;

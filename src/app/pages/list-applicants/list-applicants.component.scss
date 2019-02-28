@@ -5,14 +5,18 @@
   margin: 10px auto 0;
 
   .listOfApplicants {
+    .applicant-wrapper:not(:last-child) {
+      margin-bottom: 10px;
+    }
+
     mat-card {
       padding: 0;
 
       mat-icon.experience-plus-five {
-          position: absolute;
-          top: 2px;
-          right: 2px;
-          color: rgb(5, 236, 117);
+        position: absolute;
+        top: 2px;
+        right: 2px;
+        color: rgb(5, 236, 117);
       }
 
       .mat-card-header {
@@ -28,8 +32,17 @@
         padding-bottom: 5px;
 
         p {
-            height: 73px;
-            overflow: hidden;
+          height: 73px;
+          overflow: hidden;
+          position: relative;
+        }
+        p.no-description > span {
+          font-size: 1.1rem;
+          font-weight: 500;
+          color: rgba(0, 0, 0, 0.5);
+          position: absolute;
+          top: 30%;
+          text-transform: uppercase;
         }
       }
     }
