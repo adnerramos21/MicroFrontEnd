@@ -1,39 +1,41 @@
-<div class="content-wrapper" [ngClass.md]="{'tablet-view':true}" [ngClass.sm]="{'mobile-landscape-view':true}"
-  [ngClass.xs]="{'mobile-portrait-view':true}">
+<perfect-scrollbar>
+  <div class="content-wrapper" [ngClass.md]="{'tablet-view':true}" [ngClass.sm]="{'mobile-landscape-view':true}"
+    [ngClass.xs]="{'mobile-portrait-view':true}">
 
-  <div class="listOfApplicants space-margin-20" fxLayout="row wrap" fxLayoutGap="10px" fxLayoutGap.lt-sm="0px"
-    fxLayoutAlign=”flex-start”>
+    <div class="listOfApplicants space-margin-20" fxLayout="row wrap" fxLayoutGap="10px" fxLayoutGap.lt-sm="0px"
+      fxLayoutAlign=”flex-start”>
 
-    <div *ngFor="let applicant of applicants" fxFlex="0 1 calc(25% - 10px)" fxFlex.lt-md="0 1 calc(50% - 10px)"
-      fxFlex.lt-sm="100%" class="applicant-wrapper">
-      <mat-card>
-        <mat-card-header class="color-white">
-          <div mat-card-avatar class="example-header-image">
-            <img class="img-circle medium-avatar" src="assets/img/applicants/user-{{applicant.picture}}.jpg" alt="user-1">
-          </div>
-          <mat-card-title class="color-white">{{applicant.name}}</mat-card-title>
-          <mat-card-subtitle class="color-white">{{applicant.title}}</mat-card-subtitle>
-          <mat-icon *ngIf="applicant.hasStar" class="experience-plus-five" matTooltip="Highly skilled applicant"
-            matTooltipPosition="right">stars</mat-icon>
-        </mat-card-header>
-        <mat-card-content>
-          <p *ngIf="applicant.description; else noDescription">
-            {{applicant.description}}
-          </p>
-          <ng-template #noDescription>
-            <p class="no-description">
-              <span>
-                NO DESCRIPTION AVAILABLE
-              </span>
+      <div *ngFor="let applicant of applicants" fxFlex="0 1 calc(25% - 10px)" fxFlex.lt-md="0 1 calc(50% - 10px)"
+        fxFlex.lt-sm="100%" class="applicant-wrapper">
+        <mat-card>
+          <mat-card-header class="color-white">
+            <div mat-card-avatar class="example-header-image">
+              <img class="img-circle medium-avatar" src="assets/img/applicants/user-{{applicant.picture}}.jpg" alt="user-1">
+            </div>
+            <mat-card-title class="color-white">{{applicant.name}}</mat-card-title>
+            <mat-card-subtitle class="color-white">{{applicant.title}}</mat-card-subtitle>
+            <mat-icon *ngIf="applicant.hasStar" class="experience-plus-five" matTooltip="Highly skilled applicant"
+              matTooltipPosition="right">stars</mat-icon>
+          </mat-card-header>
+          <mat-card-content>
+            <p *ngIf="applicant.description; else noDescription">
+              {{applicant.description}}
             </p>
-          </ng-template>
-          <div>
-            {{applicant.skills}}
-          </div>
-        </mat-card-content>
-      </mat-card>
+            <ng-template #noDescription>
+              <p class="no-description">
+                <span>
+                  NO DESCRIPTION AVAILABLE
+                </span>
+              </p>
+            </ng-template>
+            <div>
+              {{applicant.skills}}
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
     </div>
 
   </div>
-
-</div>
+</perfect-scrollbar>

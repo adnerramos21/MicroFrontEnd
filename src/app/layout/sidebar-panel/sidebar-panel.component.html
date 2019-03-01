@@ -7,17 +7,18 @@
     </div>
   </mat-toolbar>
 
-  <perfect-scrollbar>
-    <div class="sidebar-content scrollable-content">
 
-      <div class="side-user-info center-align">
-        <div>
-          <img class="img-circle" src="assets/img/user.png" alt="Jane Doe">
-        </div>
-        <span class="username color-white">Jane Doe</span>
+  <div class="sidebar-content">
+
+    <div class="side-user-info center-align">
+      <div>
+        <img class="img-circle" src="assets/img/user.png" alt="Jane Doe">
       </div>
+      <span class="username color-white">Jane Doe</span>
+    </div>
 
-      <div class="side-menu">
+    <div class="side-menu scrollable-content">
+      <perfect-scrollbar>
         <mat-nav-list menuToggleDirective class="navigation">
           <mat-list-item menuToggleLink *ngFor="let menuitem of menuItems" class="color-white">
 
@@ -47,9 +48,10 @@
 
           </mat-list-item>
         </mat-nav-list>
-      </div>
-
+      </perfect-scrollbar>
     </div>
-  </perfect-scrollbar>
+
+  </div>
+
 
 </div>
