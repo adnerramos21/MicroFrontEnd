@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class ListApplicantsService {
+export class DashboardService {
 
   constructor(private http: HttpClient) { }
 
@@ -13,6 +13,6 @@ export class ListApplicantsService {
     let headers: HttpHeaders = new HttpHeaders();
     headers = headers.append('Accept', 'application/json');
 
-    return this.http.get('http://localhost:3000/test', {headers});
+    return this.http.get('http://localhost:3000/test', { headers });
   }
 }

@@ -1,12 +1,11 @@
 @import "~src/assets/scss/variables";
 @import "~src/assets/scss/base";
 
-
 .sidebar-panel {
   background-color: $primary-color;
   width: $sidebar-width;
-  overflow: hidden;
   height: 100%;
+  overflow: hidden;
 
   .company-title {
     img {
@@ -27,6 +26,12 @@
         max-width: 100%;
         height: auto;
       }
+    }
+
+    .scrollable-content {
+      overflow: auto;
+      height: 100%;
+      // calc(100% - 64px - 163px);
     }
 
     .side-menu {

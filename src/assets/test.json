@@ -1,0 +1,58 @@
+{
+	"dashboard": {
+		"infobox": {
+			"applicants": "36",
+			"availablePositions": "12",
+			"positionsOccupied": "5",
+			"companySeeking": "21"
+		},
+		"topApplicants": [
+			{
+				"applicantid": "1",
+				"description": "I am an Senior Developer with 10+ years of experience. Team leader and mentor for others and always Keep-up-to-date with the latest tech.",
+				"hasStar": true,
+				"name": "Lena Heady",
+				"pictureid": "1",
+				"skills": "Angular, HTML 5, CSS 3, ES6+, Gulp.JS, NodeJS",
+				"title": "Senior Front End Developer"
+			},
+			{
+				"applicantid": "2",
+				"description": "",
+				"hasStar": false,
+				"name": "Amy Adams",
+				"pictureid": "2",
+				"skills": "AngularJS, HTML 5, CSS 3, ES6+",
+				"title": "Front End Developer"
+			},
+			{
+				"applicantid": 3,
+				"description": "",
+				"hasStar": true,
+				"name": "Mark Wahlberg",
+				"pictureid": "3",
+				"skills": "Angular, HTML 5, CSS 3, ES6+, .NET, NodeJS",
+				"title": "Full Stack Developer"
+			},
+			{
+				"applicantid": 4,
+				"description": "",
+				"hasStar": false,
+				"name": "Rachel McAdams",
+				"pictureid": "4",
+				"skills": "React, HTML 5, CSS 3, ES6+, PHP, .NET, NodeJS",
+				"title": "Full Stack Developer"
+			},
+			{
+				"applicantid": 5,
+				"description": "",
+				"hasStar": false,
+				"name": "Emma Stone",
+				"pictureid": "5",
+				"skills": "Vue JS, HTML 5, CSS 3, ES6+",
+				"title": "Front End Developer"
+			}
+
+		]
+	}
+}

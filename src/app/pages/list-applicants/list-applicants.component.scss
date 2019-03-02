@@ -3,7 +3,7 @@
 
 .content-wrapper {
   overflow: auto;
-  height: 100%;
+  height: calc(100% - 64px);
 
   .listOfApplicants {
     .applicant-wrapper:not(:last-child) {
