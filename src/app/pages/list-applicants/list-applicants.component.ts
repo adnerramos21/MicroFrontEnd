@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ListApplicantsService } from './list-applicants.service';
 
 export interface Element {
   picture: string;
@@ -95,9 +96,10 @@ export class ListApplicantsComponent implements OnInit {
 
   applicants = ELEMENT_DATA;
 
-  constructor() { }
+  constructor(private listApplicantsService: ListApplicantsService) { }
 
   ngOnInit() {
+    this.listApplicantsService.getData();
   }
 
 }
