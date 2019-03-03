@@ -4,6 +4,7 @@ var cors = require('cors');
 
 
 const app = express();
+
 app.use(cors());
 
 app.get('/', (req, res) => {
@@ -11,16 +12,9 @@ app.get('/', (req, res) => {
 });
 
 app.get('/listofapplicants', (req, res) => {
-
     const url = 'https://notka-81395.firebaseio.com/applicants.json';
 
     request(url, function (error, response, body) {
-        // console.log(JSON.parse(body));
-        // console.log({
-        //     name: 'Tester',
-        //     age: 30
-        // });
-
         res.send(JSON.parse(body));
     });
 
@@ -40,6 +34,10 @@ app.get('/topapplicants', (req, res) => {
     request(url, function (error, response, body) {
         res.send(JSON.parse(body));
     });
+});
+
+app.get('/notificationpanel', (req, res) => {
+    // Coming soon
 });
 
 

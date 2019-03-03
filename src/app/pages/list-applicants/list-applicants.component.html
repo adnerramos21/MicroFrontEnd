@@ -10,10 +10,14 @@
         fxFlex.lt-sm="100%" class="applicant-wrapper">
         <mat-card>
           <mat-card-header class="color-white">
-            <div mat-card-avatar class="example-header-image">
-              <img class="img-circle medium-avatar" src="assets/img/applicants/user-{{applicant.pictureid}}.jpg" alt="user-1">
+            <div mat-card-avatar>
+              <img routerLink="../profile" class="img-circle medium-avatar show-pointer" src="assets/img/applicants/user-{{applicant.pictureid}}.jpg" alt="user-1">
             </div>
-            <mat-card-title class="color-white">{{applicant.name}}</mat-card-title>
+            <mat-card-title class="notka-link">
+              <a class="color-white" routerLink="../profile">
+                {{applicant.name}}
+              </a>
+            </mat-card-title>
             <mat-card-subtitle class="color-white">{{applicant.title}}</mat-card-subtitle>
             <mat-icon *ngIf="applicant.hasStar" class="experience-plus-five" matTooltip="Highly skilled applicant"
               matTooltipPosition="right">stars</mat-icon>
@@ -39,5 +43,5 @@
     </div>
 
   </perfect-scrollbar>
-  
+
 </div>

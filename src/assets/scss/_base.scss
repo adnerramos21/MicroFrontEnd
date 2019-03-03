@@ -33,7 +33,7 @@
 }
 
 .display-inline-block {
-  display: inline-block
+  display: inline-block;
 }
 
 .color-white {
@@ -44,19 +44,41 @@
   width: 100%;
 }
 
+.notka-link {
+  a {
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+  }
+
+  a::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $light-grey-color;
+    transition: width 0.2s ease-in-out;
+  }
+
+  a:hover::after {
+    width: 100%;
+  }
+}
+
 .pill {
   padding: 5px 12px;
   border: 1px solid $light-grey-color;
-	border-radius: 15px;
-	text-align: center;
-	white-space: nowrap;
+  border-radius: 15px;
+  text-align: center;
+  white-space: nowrap;
 }
 
 .pill-primary {
-	border-color: darken($primary-color, 25%);
-	color: $primary-color;
+  border-color: darken($primary-color, 25%);
+  color: $primary-color;
 }
-
 
 .space-margin-10 {
   margin: 10px;
@@ -65,7 +87,6 @@
 .space-margin-20 {
   margin: 20px;
 }
-
 
 .space-top-margin-10 {
   margin-top: 10px;

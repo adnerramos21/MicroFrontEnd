@@ -20,6 +20,7 @@ import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.com
 import { ListApplicantsService } from './pages/list-applicants/list-applicants.service';
 import { HttpClientModule } from '@angular/common/http';
 import { DashboardService } from './pages/dashboard/dashboard.service';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true
@@ -35,7 +36,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     SkillCheckerComponent,
     ListApplicantsComponent,
     DashboardComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

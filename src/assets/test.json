@@ -26,7 +26,7 @@
 				"title": "Front End Developer"
 			},
 			{
-				"applicantid": 3,
+				"applicantid": "3",
 				"description": "",
 				"hasStar": true,
 				"name": "Mark Wahlberg",
@@ -35,7 +35,7 @@
 				"title": "Full Stack Developer"
 			},
 			{
-				"applicantid": 4,
+				"applicantid": "4",
 				"description": "",
 				"hasStar": false,
 				"name": "Rachel McAdams",
@@ -44,7 +44,7 @@
 				"title": "Full Stack Developer"
 			},
 			{
-				"applicantid": 5,
+				"applicantid": "5",
 				"description": "",
 				"hasStar": false,
 				"name": "Emma Stone",
