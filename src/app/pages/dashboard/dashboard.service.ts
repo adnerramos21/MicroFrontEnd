@@ -7,12 +7,24 @@ import { Observable } from 'rxjs';
 })
 export class DashboardService {
 
+  private headers: HttpHeaders = new HttpHeaders();
+  private url = 'http://localhost:3000/';
+
   constructor(private http: HttpClient) { }
 
-  getData(): Observable<any> {
-    let headers: HttpHeaders = new HttpHeaders();
-    headers = headers.append('Accept', 'application/json');
+  getInfoBoxData(): Observable<any> {
+    const header = this.headers.append('Accept', 'application/json');
+    return this.http.get(this.url + 'infobox', { headers: header });
+  }
 
-    return this.http.get('http://localhost:3000/test', { headers });
+  getTopApplicantsData(): Observable<any> {
+    const header = this.headers.append('Accept', 'application/json');
+    return this.http.get(this.url + 'topapplicants', { headers: header });
   }
 }
+
+export interface IDashboardService {
+  getInfoBoxData(): Observable<any>;
+  getTopApplicantsData(): Observable<any>;
+}
+

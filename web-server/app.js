@@ -10,7 +10,7 @@ app.get('/', (req, res) => {
     res.send('Hello express');
 });
 
-app.get('/test', (req, res) => {
+app.get('/listofapplicants', (req, res) => {
 
     const url = 'https://notka-81395.firebaseio.com/applicants.json';
 
@@ -26,16 +26,23 @@ app.get('/test', (req, res) => {
 
 });
 
-
-app.get('/dashboard', (req, res) => {
-
-    const url = 'https://notka-81395.firebaseio.com/dashboard.json';
+app.get('/infobox', (req, res) => {
+    const url = 'https://notka-81395.firebaseio.com/dashboard/infobox.json';
 
     request(url, function (error, response, body) {
         res.send(JSON.parse(body));
     });
-
 });
+
+app.get('/topapplicants', (req, res) => {
+    const url = 'https://notka-81395.firebaseio.com/dashboard/topApplicants.json';
+
+    request(url, function (error, response, body) {
+        res.send(JSON.parse(body));
+    });
+});
+
+
 
 app.listen(3000, () => {
     console.log('server is up on port 3000');

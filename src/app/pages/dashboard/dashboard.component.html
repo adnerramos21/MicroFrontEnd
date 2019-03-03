@@ -3,7 +3,7 @@
 
   <div class="info-box space-margin-20" fxLayout="row wrap" fxLayout.sm="column" fxLayout.xs="column" fxLayoutGap="10px"
     fxLayoutGap.lt-sm="0px">
-    <div *ngFor="let infoBox of infoBoxes" fxFlex="0 1 calc(25% - 10px)" fxFlex.md="0 1 calc(50% - 10px)"
+    <div *ngFor="let infoBox of infoBoxes | async" fxFlex="0 1 calc(25% - 10px)" fxFlex.md="0 1 calc(50% - 10px)"
       fxFlex.lt-sm="100%" class="info-box-child">
       <mat-card>
         <div class="card-wrapper" fxLayout="row">
@@ -19,7 +19,7 @@
               {{infoBox.title}}
             </div>
             <div class="text">
-              <span class="amount">{{infoBox.amount}}</span>
+              <span class="amount">{{infoBox.quantity}}</span>
               <span class="when">{{infoBox.when}}</span>
             </div>
           </div>
@@ -73,12 +73,12 @@
           </div>
 
           <div class="notka-card-content">
-            <table mat-table [dataSource]="dataSource">
+            <table mat-table [dataSource]="dataSource | async">
 
-              <ng-container matColumnDef="picture">
+              <ng-container matColumnDef="pictureid">
                 <th mat-header-cell *matHeaderCellDef> Pict </th>
                 <td mat-cell *matCellDef="let element">
-                  <img class="img-circle small-avatar" src="assets/img/applicants/user-{{element.picture}}.jpg" alt="user-{{element.picture}}">
+                  <img class="img-circle small-avatar" src="assets/img/applicants/user-{{element.pictureid}}.jpg" alt="user-{{element.pictureid}}">
                 </td>
               </ng-container>
 
