@@ -6,14 +6,47 @@
   height: calc(100% - 64px);
 
   .profile {
+    .bg-profile {
+      border-radius: 4px;
+      position: absolute;
+      width: 100%;
+      max-width: 100%;
+      max-height: 450px;
+      height: 450px;
+      background-image: url("../../../assets/img/background/bg-profile-2.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .detail-info-wrapper {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .detail-info {
+      z-index: 1;
+      color: rgba(255,255,255,0.8);
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        margin-left: 16px;
+        margin-right: 16px;
+
+        li {
+          text-align: left;
+          margin-bottom: 20px;
+        }
+      }
+    }
+
     .presentation-panel {
       height: 450px;
-      background-color: darken($color: $primary-color, $amount: 10);
 
       .social {
         position: absolute;
         top: 15px;
-        right: 25px;
+        right: 50px;
         z-index: 1;
 
         a {
@@ -27,16 +60,22 @@
 
         a.linkedin-icon:hover {
           color: rgba(2, 116, 179, 1);
+          transition: color 0.23s ease-in-out;
         }
-        
+
         a.twitter-icon:hover {
-          color: rgba(28,166,214, 1);
+          color: rgba(28, 166, 214, 1);
+          transition: color 0.23s ease-in-out;
+        }
+
+        a.instagram-icon:hover {
+          color: rgba(247, 108, 202, 1);
+          transition: color 0.23s ease-in-out;
         }
       }
 
       .main-info {
-        padding: 15% 5% 5% 5%;
-        position: relative;
+        padding: 15% 5% 5%;
 
         .avatar {
           width: 90px;
@@ -45,6 +84,8 @@
             box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
             max-width: 100%;
             height: auto;
+            border-radius: 5%;
+            border: 2px solid rgba(255, 255, 255, 1);
           }
         }
 
