@@ -102,10 +102,55 @@
       <mat-card>
         <mat-card-header>
           <mat-card-title>Experience</mat-card-title>
-          <mat-card-subtitle>10 Years of experience as Senior Front End Developer</mat-card-subtitle>
+          <mat-card-subtitle>10+ Years of experience as Senior Front End Developer</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
           <div class="list-experience">
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-badge">
+                  <mat-icon aria-label="label">keyboard_arrow_right</mat-icon>
+                </div>
+                <div class="timeline-body">
+                  <h3> <span class="date">Feb 2019</span> &middot; <span class="company">General Electric</span> </h3>
+                  <span class="title">Senior Front End Developer</span>
+                  <p>
+                    Responsible for code maintenance along with other Senior Developers <br>
+                    Responsible for training Junior Developers <br>
+                    Handle UX/UI designs and customer satisfaction
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-badge">
+                  <mat-icon aria-label="label">keyboard_arrow_right</mat-icon>
+                </div>
+                <div class="timeline-body">
+                  <h3> <span>Sep 2009</span> &middot; <span>Credit Union</span> </h3>
+                  <span>Junior Front End Developer</span>
+                  <p>
+                    <span class="no-description">No description</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="timeline-item">
+                <div class="timeline-badge">
+                  <mat-icon aria-label="label">keyboard_arrow_right</mat-icon>
+                </div>
+                <div class="timeline-body">
+                  <h3> <span>Sep 2008</span> &middot; <span>American Airlines</span> </h3>
+                  <span>Intern Front End Developer</span>
+                  <p>
+                    Shadow Senior Front End Developer when building mobile and web applications <br>
+                    Create Mockups that satisfied business requirements <br>
+                    Aid developement team test new builds
+                  </p>
+                </div>
+              </div>
+
+            </div>
             <!-- <ul>
               <li>
                 <span>Jan 2010 - Feb 2019</span>
@@ -119,26 +164,41 @@
         </mat-card-content>
       </mat-card>
     </div>
-    <div fxFlex="50%" class="education">
-      <mat-card>
-        <mat-card-header>
-          <mat-card-title>Education</mat-card-title>
-          <mat-card-subtitle>Bachelor's Degree in Computer Science from University of Minnesota</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-          <div class="list-education">
-            <!-- <ul>
-              <li>
-                <span>Jan 2010 - Feb 2019</span>
-                <h4>General Electric</h4>
-                <span>Web Developer</span>
-              </li>
-              <li></li>
-              <li></li>
-            </ul> -->
-          </div>
-        </mat-card-content>
-      </mat-card>
+    <div fxFlex="50%">
+
+      <div class="skills">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Skills</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="list-skills">
+              <span *ngFor="let skill of skills" class="pill space-right-margin-10">
+                {{skill}}
+              </span>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="education space-top-margin-20">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Education</mat-card-title>
+          </mat-card-header>
+          <mat-card-content>
+            <div class="list-education">
+              <h4>
+                University of Minnesota
+              </h4>
+              <div>
+                Bachelor's Degree in Computer Science
+              </div>
+            </div>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
     </div>
   </div>
 

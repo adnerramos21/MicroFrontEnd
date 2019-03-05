@@ -7,6 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
+  skills = [
+    'Angular',
+    'HTML 5',
+    'CSS 3',
+    'ES6+',
+    'Gulp.JS',
+    'NodeJS'
+  ];
+
   constructor() { }
 
   ngOnInit() {
