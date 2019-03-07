@@ -3,13 +3,16 @@ const request = require('request');
 var cors = require('cors');
 
 
-const app = express(express.static('./dist/main-app'));
+const app = express();
+app.use(express.static('./dist/main-app'));
+
 const port = process.env.PORT || 3000;
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.send('Hello express');
+app.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/dist/main-app/index.html'));
+    // res.send('Hello express');
 });
 
 app.get('/listofapplicants', (req, res) => {
