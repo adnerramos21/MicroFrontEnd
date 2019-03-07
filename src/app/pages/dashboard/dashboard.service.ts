@@ -8,13 +8,14 @@ import { Observable } from 'rxjs';
 export class DashboardService {
 
   private headers: HttpHeaders = new HttpHeaders();
-  private url = 'http://localhost:3000/';
+  private url = '';
+  // 'http://localhost:3000';
 
   constructor(private http: HttpClient) { }
 
   getInfoBoxData(): Observable<any> {
     const header = this.headers.append('Accept', 'application/json');
-    return this.http.get(this.url + 'infobox', { headers: header });
+    return this.http.get(this.url + '/infobox', { headers: header });
   }
 
   getTopApplicantsData(): Observable<any> {

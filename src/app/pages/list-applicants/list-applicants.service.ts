@@ -7,12 +7,14 @@ import { Observable } from 'rxjs';
 })
 export class ListApplicantsService {
 
+  private headers: HttpHeaders = new HttpHeaders();
+  private url = '';
+  // 'http://localhost:3000';
+
   constructor(private http: HttpClient) { }
 
   getData(): Observable<any> {
-    let headers: HttpHeaders = new HttpHeaders();
-    headers = headers.append('Accept', 'application/json');
-
-    return this.http.get('http://localhost:3000/listofapplicants', {headers});
+    const header = this.headers.append('Accept', 'application/json');
+    return this.http.get(this.url + '/listofapplicants', {headers: header});
   }
 }
