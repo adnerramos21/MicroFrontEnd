@@ -2,7 +2,7 @@
 @import "~src/assets/scss/base";
 
 .content-wrapper {
-  overflow: auto;
+  overflow: hidden auto;
   height: calc(100% - 64px);
 
   .listOfApplicants {
